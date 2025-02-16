@@ -231,7 +231,99 @@ iframe {
     letter-spacing: 0;
     margin-bottom: 15px;
 }
+/* ----------- M (1020px - 1339px) ----------- */
+@media (max-width: 1339px) {
+    .experience-container-video,
+    .experience-bg,
+    .experience-video {
+        width: 405px;
+        height: 271px;
+    }
+}
+/* ----------- S (700px - 1019px) ----------- */
+@media (max-width: 1019px) {
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .about-text {
+        margin-bottom: 20px; /* Добавил отступ между текстом и видео */
+        text-align: center;
+    }
+
+    .experience-container-video {
+        order: 2; /* Видео снизу */
+    }
+
+    .about-text {
+        order: 1; /* Текст сверху */
+    }
+
+    .experience-container-video,
+    .experience-bg,
+    .experience-video {
+        width: 540px;
+        height: 361px;
+    }
+
+    .about-text__title {
+        font-size: 48px;
+    }
+
+    .about-text__subtitle {
+        font-size: 30px;
+    }
+
+    .about-text__paragraph {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+/* ----------- XS (0px - 699px) ----------- */
+@media (max-width: 699px) {
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        margin-bottom: 15px; /* Добавил отступ между текстом и видео */
+        text-align: center;
+    }
+
+    .experience-container-video {
+        order: 2; /* Видео снизу */
+    }
+
+    .about-text {
+        order: 1; /* Текст сверху */
+    }
+
+    .experience-container-video,
+    .experience-bg,
+    .experience-video {
+        width: 260px;
+        height: 174px;
+    }
+
+    .about-text__title {
+        font-size: 36px;
+    }
+
+    .about-text__subtitle {
+        font-size: 24px;
+    }
+
+    .about-text__paragraph {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+
+/* production */
 .production {
     height: 252px;
     background-color: #0a3b93;
