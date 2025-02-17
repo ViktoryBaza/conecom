@@ -88,18 +88,42 @@
       </div>
     </section>
     <!-- advantages Section -->
-    <section class="advantages">
-      <h2>Наши преимущества</h2>
-      <div class="swiper-container">
-          <div class="swiper-wrapper advantages-container" id="advantages-container"></div>
-          <div class="swiper-pagination"></div>
-      </div>
-  </section>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="/js/advantages.js"></script>
-  
+    <div id="advantages-grid" class="advantages-container"></div>
+
+    <!-- Контейнер для слайдера -->
+    <div id="advantages-slider" class="swiper-container">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/js/advantages.js"></script>
 
     <!-- company-stats Section -->
+
+    <!--     <section class="slider-advantages">
+      <h2>Наши преимущества</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/adv1.jpg" alt="Преимущество 1"></div>
+          <div class="swiper-slide"><img src="img/adv2.jpg" alt="Преимущество 2"></div>
+          <div class="swiper-slide"><img src="img/adv3.jpg" alt="Преимущество 3"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section> -->
+
+    <link rel="stylesheet" href="/css/slider.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/slider.js"></script>
+
+    <link rel="stylesheet" href="/css/slider.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/slider.js"></script>
 
     <section class="company-stats">
       <div class="company-intro">
@@ -152,5 +176,10 @@
         class="white-patches-company"
       />
     </section>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>

@@ -441,6 +441,7 @@ iframe {
 .mission-button:hover {
     background-color: #f0f0f0;
 }
+/* advantages */
 .advantages {
     padding: 20px;
     background-color: #f7eee5;
@@ -463,10 +464,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 15px;
-    margin: 60px;
+    margin: 0px 60px;
+    margin: 60px 60px 125px 60px;
 }
 
-/* Блок преимущества */
 .advantage {
     position: relative;
     background: #0a3b93;
@@ -496,22 +497,115 @@ h2 {
     border: none;
     cursor: pointer;
 }
+/* .toggle-btn img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+} */
 
-/* Слайдер */
+.advantage.expanded {
+    background-color: #0a3b93;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.slider-advantages {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для стрелок */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для точек */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #007aff;
+    opacity: 1;
+}
+
+/* Сетка */
+.advantages-container {
+}
+
+/* Стили для карточек */
+.advantage {
+}
+
+.advantage img {
+}
+
+.advantage .text {
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Скрытие неактивных блоков */
+#advantages-slider {
+    display: none;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Медиа-запрос для слайдера */
 @media (max-width: 768px) {
-    .advantages-container {
-        display: flex;
-        overflow: hidden;
+    #advantages-grid {
+        display: none;
     }
-
-    .swiper-container {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .swiper-slide {
-        display: flex;
-        justify-content: center;
+    #advantages-slider {
+        display: block;
     }
 }
 
