@@ -153,16 +153,17 @@
 }
 
 /* experience */
-.experience {
+/* .experience {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     height: 602px;
+    height: auto;
 }
 
 .experience-container {
-    /*  position: relative; */
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -170,7 +171,7 @@
 }
 
 .experience-container-video {
-    position: relative; /* Теперь фон и видео позиционируются относительно него */
+    position: relative;  
     width: 545px;
     height: 365px;
     margin-top: 0;
@@ -181,18 +182,59 @@
     width: 545px;
     height: 367px;
     background: #f7eee5;
-    top: 100px; /* Смещаем вверх */
-    left: 25px; /* Смещаем левее */
-    z-index: -1; /* Фон под видео */
+    top: 100px;  
+    left: 25px;  
+    z-index: -1;  
 }
 
 .experience-video {
     position: absolute;
     width: 545px;
     height: 365px;
-    z-index: 2; /* Видео выше фона */
-    left: 60px; /* Смещаем немного вправо, чтобы оно выходило за фон */
-    top: 137px; /* Немного ниже, чтобы не прилипало к верху */
+    z-index: 2;  
+    left: 60px; 
+    top: 137px;  
+} */
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column; /* Добавляем */
+    height: auto; /* Теперь высота подстраивается */
+    padding-bottom: 50px; /* Добавляем отступ снизу, чтобы не слипалось с .production */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.experience-container-video {
+    height: auto; /* Позволяем контейнеру расти */
+    margin-top: 0;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column; /* Упорядочиваем фон и видео */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.experience-bg {
+    width: 545px;
+    height: 367px;
+    background: #f7eee5;
+}
+
+.experience-video {
+    width: 545px;
+    height: 367px;
+    margin-right: -35px;
+    margin-top: -327px;
 }
 
 iframe {
@@ -248,7 +290,6 @@ iframe {
     }
 
     .about-text {
-        margin-bottom: 20px; /* Добавил отступ между текстом и видео */
         text-align: center;
     }
 
@@ -322,13 +363,12 @@ iframe {
     }
 }
 
-
 /* production */
 .production {
-    height: 252px;
     background-color: #0a3b93;
 }
 .production-content {
+    height: 252px;
     display: flex;
     flex-direction: row;
     background-color: #0a3b93;
@@ -343,6 +383,11 @@ iframe {
     color: #ffffff;
     font-size: 24px;
 }
+.production_bluePatches {
+    display: flex;
+    align-self: flex-end;
+}
+/* mission */
 
 .mission {
     background-image: url("../images/backgrounds/misson-bg.jpg"); /* Путь к картинке */
@@ -396,7 +441,6 @@ iframe {
 .mission-button:hover {
     background-color: #f0f0f0;
 }
-
 .advantages {
     padding: 20px;
     background-color: #f7eee5;
@@ -419,10 +463,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 15px;
-    margin: 0px 60px;
-    margin: 60px 60px 125px 60px;
+    margin: 60px;
 }
 
+/* Блок преимущества */
 .advantage {
     position: relative;
     background: #0a3b93;
@@ -452,18 +496,26 @@ h2 {
     border: none;
     cursor: pointer;
 }
-/* .toggle-btn img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-} */
 
-.advantage.expanded {
-    background-color: #0a3b93;
-    color: #ffffff;
-    padding: 20px;
+/* Слайдер */
+@media (max-width: 768px) {
+    .advantages-container {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .swiper-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
 }
 
+/* company-stats */
 .company-stats {
     background: #f7eee5;
     position: relative;
