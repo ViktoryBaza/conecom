@@ -108,33 +108,37 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-document.querySelectorAll(".toggle-btn").forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    const index = event.currentTarget.dataset.index;
-    const advElement = document.querySelector(`.advantage[data-index="${index}"]`);
 
-    if (!advElement) return;
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".toggle-btn");
+  if (!button) return; // Если клик не по кнопке, выходим
 
-    const advantage = advantagesData[index];
-    const isExpanded = advElement.classList.contains("expanded");
+  const index = button.dataset.index;
+  const advElement = document.querySelector(`.advantage[data-index="${index}"]`);
 
-    if (isExpanded) {
-      advElement.innerHTML = `
-        <img src="${advantage.img}" alt="${advantage.title}">
-        <div class="text">${advantage.title}</div>
-        <button class="toggle-btn" data-index="${index}">
-          <img src="/images/icons/plus.svg" alt="plus">
-        </button>
-      `;
-      advElement.classList.remove("expanded");
-    } else {
-      advElement.innerHTML = `
-        <p class="description">${advantage.description}</p>
-        <button class="toggle-btn" data-index="${index}">
-          <img src="/images/icons/minus.svg" alt="minus">
-        </button>
-      `;
-      advElement.classList.add("expanded");
-    }
-  });
+  if (!advElement) return;
+
+  const advantage = advantagesData[index];
+  const isExpanded = advElement.classList.contains("expanded");
+
+  if (isExpanded) {
+    // Вернуть оригинальное состояние (изображение и заголовок)
+    advElement.innerHTML = `
+      <img src="${advantage.img}" alt="${advantage.title}">
+      <div class="text">${advantage.title}</div>
+      <button class="toggle-btn" data-index="${index}">
+        <img src="/images/icons/plus.svg" alt="plus">
+      </button>
+    `;
+    advElement.classList.remove("expanded");
+  } else {
+    // Показать описание
+    advElement.innerHTML = `
+      <div class="text_after">${advantage.description}</div>
+      <button class="toggle-btn" data-index="${index}">
+        <img src="/images/icons/cross.svg" alt="cross">
+      </button>
+    `;
+    advElement.classList.add("expanded");
+  }
 });
