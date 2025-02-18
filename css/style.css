@@ -516,9 +516,9 @@ h2 {
 }
 
 .swiper-container {
-    width: 100%;
     height: auto;
     position: relative;
+    /*   width: 400px; */
 }
 
 .swiper-slide img {
@@ -587,20 +587,8 @@ h2 {
 }
 
 .swiper-container {
-    width: 100%;
     padding: 0;
 }
-.swiper-wrapper {
-    display: flex;
-    gap: 0; /* Устанавливаем промежуток между слайдами */
-}
-
-.swiper-slide {
-    width: calc(50% - 10px); /* Два слайда занимают 50% ширины контейнера, минус небольшой отступ */
-    box-sizing: border-box;
-    margin: 0; /* Убираем маргины */
-}
-
 
 /* Медиа-запрос для слайдера */
 @media (max-width: 1019px) {
