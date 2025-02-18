@@ -503,11 +503,11 @@ h2 {
     object-fit: contain;
 } */
 
-.advantage.expanded {
+/* .advantage.expanded {
     background-color: #0a3b93;
     color: #ffffff;
     padding: 20px;
-}
+} */
 
 .slider-advantages {
     max-width: 800px;
@@ -521,21 +521,13 @@ h2 {
     position: relative;
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .swiper-slide img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Стили для стрелок */
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
@@ -551,7 +543,7 @@ h2 {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     background: rgba(0, 0, 0, 0.8);
-}
+} */
 
 /* Стили для точек */
 .swiper-pagination {
@@ -596,16 +588,31 @@ h2 {
 
 .swiper-container {
     width: 100%;
-    padding: 20px;
+    padding: 0;
+}
+.swiper-wrapper {
+    display: flex;
+    gap: 0; /* Устанавливаем промежуток между слайдами */
 }
 
+.swiper-slide {
+    width: calc(50% - 10px); /* Два слайда занимают 50% ширины контейнера, минус небольшой отступ */
+    box-sizing: border-box;
+    margin: 0; /* Убираем маргины */
+}
+
+
 /* Медиа-запрос для слайдера */
-@media (max-width: 768px) {
+@media (max-width: 1019px) {
     #advantages-grid {
         display: none;
     }
     #advantages-slider {
         display: block;
+    }
+    .advantage {
+        width: 260px;
+        height: 294px;
     }
 }
 

@@ -92,8 +92,9 @@ advantagesData.forEach((adv, index) => {
 
 // Инициализация слайдера Swiper
 const swiper = new Swiper(".swiper-container", {
-  slidesPerView: 1,
+  slidesPerView: 2, // Показываем по 2 слайда всегда
   spaceBetween: 20,
+  loop: true, // Зацикленный слайдер
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -103,18 +104,26 @@ const swiper = new Swiper(".swiper-container", {
     clickable: true,
   },
   breakpoints: {
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
+    480: {
+      slidesPerView: 1, // Для маленьких экранов
+    },
+    700: {
+      slidesPerView: 2, // Для экранов от 700px до 1019px
+    },
+    1020: {
+      slidesPerView: 3, // Для экранов от 1020px
+    },
   },
 });
-
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest(".toggle-btn");
   if (!button) return; // Если клик не по кнопке, выходим
 
   const index = button.dataset.index;
-  const advElement = document.querySelector(`.advantage[data-index="${index}"]`);
+  const advElement = document.querySelector(
+    `.advantage[data-index="${index}"]`
+  );
 
   if (!advElement) return;
 
