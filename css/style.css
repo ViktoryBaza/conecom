@@ -497,17 +497,6 @@ h2 {
     border: none;
     cursor: pointer;
 }
-/* .toggle-btn img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-} */
-
-/* .advantage.expanded {
-    background-color: #0a3b93;
-    color: #ffffff;
-    padding: 20px;
-} */
 
 .slider-advantages {
     max-width: 800px;
@@ -518,6 +507,9 @@ h2 {
 .swiper-container {
     height: auto;
     position: relative;
+    margin-top: 20px; /* Отступ сверху */
+
+    padding-bottom: 50px;
     /*   width: 400px; */
 }
 
@@ -526,29 +518,16 @@ h2 {
     height: auto;
 }
 
-/* Стили для стрелок */
-/* .swiper-button-next,
-.swiper-button-prev {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+.swiper-slide {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background: rgba(0, 0, 0, 0.8);
-} */
 
 /* Стили для точек */
 .swiper-pagination {
     position: absolute;
     bottom: 10px;
+    z-index: 5;
 }
 
 .swiper-pagination-bullet {
@@ -580,6 +559,25 @@ h2 {
     border: none;
     cursor: pointer;
 }
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    width: 50px; /* Укажите нужный размер */
+    height: 50px;
+    background: none; /* Убираем стандартный фон */
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+    width: 100%;
+    height: auto;
+}
 
 /* Скрытие неактивных блоков */
 #advantages-slider {
@@ -601,6 +599,8 @@ h2 {
     .advantage {
         width: 260px;
         height: 294px;
+        margin-left: 30px;
+        margin-bottom: 40px;
     }
 }
 
